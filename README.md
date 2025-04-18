@@ -90,12 +90,14 @@ conda activate simclr-env
 
 Train the model using:
 ```bash
-python train.py --config config.yaml --stage train
+python train.py --stage=train  --gpus=0  --path exp  --config configs/SIM_CLR.yaml
+
 ```
 
 Create the tsne-maps:
 ```bash
-python train.py --config config.yaml --stage test
+python train.py --stage=test  --gpus=0  --path exp  --config configs/SIM_CLR.yaml
+
 ```
 
 ## 📈 Logging with Weights & Biases (wandb)
